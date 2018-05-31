@@ -8,10 +8,15 @@ public class Bsp1A {
 		titel("Fibonacci-Demo");
 		
 		n=IO.readInt("Eingabe einer natuerlichen Zahl:");
+		
+		long starttime = System.currentTimeMillis();
 		for (int i=1; i<=n;i++) {                                    
 			IO.print(i,5);
 			IO.println("..."+fibo(i));
 		}
+		long endtime = System.currentTimeMillis();
+		long zeitdauer = endtime - starttime;
+		IO.println("\n\n\t"+zeitdauer);
 		verabschiedung();
 
 	}
